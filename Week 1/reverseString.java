@@ -5,21 +5,37 @@ public class reverseString {
 		char[] sentenceChar = sentence.toCharArray();
 		String reverseSentence = "";
 		String temp;
-		for(int  i= sentenceChar.length-1; i>=0;i--) {
+
+		if(sentenceChar.length == 1 && sentence != " ") {
+			return "EXCEPTION: You have provided only one letter to reverse!!";
+		}
+		else if(sentence == " ") {
+			return "EXCEPTION: You have provided white space to reverse!!";
+		}
+		else {
+			for(int  i= sentenceChar.length-1; i>=0;i--) {
 			temp = Character.toString(sentenceChar[i]);
 			reverseSentence = reverseSentence + temp;
 			
 		}
 		return reverseSentence;
+		}
+		
+	}
+
+	public static void displayResult(String sentenceToReverse) {
+		System.out.println("\nThis is a original string:==>   " + sentenceToReverse);
+		System.out.println("-------------------------------------------------------------------------------------------------------------->");
+		System.out.println("This is a reverse of the string:==>   " + reverseString(sentenceToReverse));
+		System.out.println("===============================================================================================================\n");	
+		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		String userString = "Hello! This a program build to reverse a string!!!";
-		System.out.println("This is a original string:==>   " + userString);
-		System.out.println("------------------------------->");
-		System.out.println("This is a reverse of the string:==>   " + reverseString(userString));
+		displayResult("a");
+		displayResult(" ");
+		displayResult("Hello! this is a program that reverse the string!");
 		
 	}
 
