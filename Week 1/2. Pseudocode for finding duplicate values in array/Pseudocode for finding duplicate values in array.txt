@@ -1,0 +1,21 @@
+ Algorithm that will find the duplicate or repeated value in an array.
+
+Step1:     Start
+Step2:     Declare Array userValue[]
+Step3:     Input userValue
+Step4:     If userValue.size = 1 
+Step4.1:      Display There is only one number.
+Step4.2:      Stop
+           EndIf
+Step5:     Declare variable i, j
+Step6:     Initialize 
+           i = 0
+           j = i+1
+Step7:     If userValue[i]==userValue[j] and i != j
+Step7.1:      Print userValue[j]
+           EndIf
+Step7.2:     j = j+1
+Step8:     Repeat Step7 until j < userValue.size
+Step9:     i = i+1
+Step10:    Repeat Step7 until i < userValue.size -1
+Step11:    Stop 		

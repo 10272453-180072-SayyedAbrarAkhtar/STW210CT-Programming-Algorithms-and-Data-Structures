@@ -1,0 +1,20 @@
+// An algorithm to find out whether a word is palindrome or not
+
+Step1:     Start
+Step2:     Display "Please enter a word to check Palindrome:"
+Step3:     Input word
+Step4:     Declare arrLetters[]
+Step5:     arrLetters = word.toCharArray() //converting string word into array of char and storing it to arrLetters
+Step6:     Declare variable i, j
+Step7:     Initialize
+	   i=0
+           j=arrLetters.size-1 //assigning last index of the arrayLetters to j
+Step8:     If arrLetters[i] != arrletters[j]
+Step8.1:      print "The word is not Palindrome"
+Step8.2:      return
+           EndIf
+Step9:     i = i+1
+	   j = j-1  
+Step10:    Repeat Step8 until i < j
+Step11:    Print "The word is palindrome"
+Step12:    Stop

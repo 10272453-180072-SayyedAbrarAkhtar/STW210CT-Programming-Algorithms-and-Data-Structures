@@ -1,0 +1,40 @@
+//An algorithm to add two polynomial in the form "( ) = ∗ + ⋯ + 1 ∗ 1 +"
+
+
+Step1:     Start
+Step2:     Declare Array arrFirstPoly[], arrSecondPoly[]     //It stores the coefficient of first polynomial and second polynomial.
+Step3:     Declare Int count
+Step4:     Input arrFirstPoly
+Step5:     Input arrSecondPoly
+Step6:	   Declare Int size
+Step7:     If (arrFirstPoly.length >= arr.SecondPoly.length)
+Step7.1:      size=arrFirstpoly.length
+Step7.2:   Else
+Step7.3:      size=arrFirstpoly.length
+Step7.4:   EndIf
+
+Step8:     Declare Array arrSumPoly[size-1] //It stores sum of coefficient of first and second polynomial
+
+Step9:     If(arrFirstPoly.length==size)
+Step9.1:      count = 0
+Step9.2:      arrSumPoly[count]=arrFirstPoly[count]
+Step9.3:      count = count + 1 
+Step9.4:      Repeat Step9.2 and Step9.3 until i < arrFirstpoly.length
+Step9.5:      count = 0
+Step9.6:      arrSumPoly[count] = arrSumPoly[count] + arrSecondPoly[count]
+Step9.7:      count = count + 1
+Step9.8:     Repeat Step9.6 and Step9.7 until i < arrSecondpoly.length
+
+Step9.9:   Else
+Step9.10:      count = 0
+Step9.11:      arrSumPoly[count]=arrSecondPoly[count]
+Step9.12:      count = count + 1 
+Step9.13:      Repeat Step9.11 and Step9.12 until i < arrSecondpoly.length
+Step9.14:      count = 0S
+Step9.15:      arrSumPoly[count] = arrSumPoly[count] + arrFirstPoly[count]
+Step9.16:      count = count + 1
+Step9.17:      Repeat Step9.15 and Step9.16 until i < arrFirstpoly.length
+Step9.18:  EndIf
+
+Step10:    print arrSumPoly
+Step11:    Stop

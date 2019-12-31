@@ -1,20 +1,17 @@
+import java.util.Scanner;
 
-public class reverseString {
+public class ReverseString {
 	
 	public static String reverseString(String sentence) {
-		char[] sentenceChar = sentence.toCharArray();
 		String reverseSentence = "";
 		String temp;
-
-		if(sentenceChar.length == 1 && sentence != " ") {
-			return "EXCEPTION: You have provided only one letter to reverse!!";
-		}
-		else if(sentence == " ") {
-			return "EXCEPTION: You have provided white space to reverse!!";
+		// using length() method to get length of the string
+		if(sentence.length() == 1) {
+			return "EXCEPTION: Either you have provided only one letter or white space to reverse!!";
 		}
 		else {
-			for(int  i= sentenceChar.length-1; i>=0;i--) {
-			temp = Character.toString(sentenceChar[i]);
+			for(int  i= sentence.length()-1; i>=0;i--) {
+			temp = Character.toString(sentence.charAt(i)); //using charAt() method to get the character at given index
 			reverseSentence = reverseSentence + temp;
 			
 		}
@@ -24,6 +21,7 @@ public class reverseString {
 	}
 
 	public static void displayResult(String sentenceToReverse) {
+		
 		System.out.println("\nThis is a original string:==>   " + sentenceToReverse);
 		System.out.println("-------------------------------------------------------------------------------------------------------------->");
 		System.out.println("This is a reverse of the string:==>   " + reverseString(sentenceToReverse));
@@ -32,11 +30,10 @@ public class reverseString {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		displayResult("a");
-		displayResult(" ");
-		displayResult("Hello! this is a program that reverse the string!");
-		
+		Scanner userSentence = new Scanner(System.in);  
+	    System.out.println("Please provide a sentence to reverse:");
+	    String sentenceToReverse = userSentence.nextLine(); 
+		displayResult(sentenceToReverse);
 	}
 
 }

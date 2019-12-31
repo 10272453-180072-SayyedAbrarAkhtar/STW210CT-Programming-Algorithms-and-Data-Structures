@@ -1,0 +1,6 @@
+
+// Time complexity.
+
+The best case Time Complexity in a Linear search is O(1) where we find the search Item in first attempt
+The worst case Time complexity in a Linear search is O(n) where we continue searching each item and find the search item at last.
+  
